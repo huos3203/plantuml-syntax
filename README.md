@@ -32,7 +32,8 @@ autocmd BufRead,BufNewFile *.pu,*.uml,*.plantuml setfiletype plantuml | set file
 在vim中输入`:colorscheme`查看当前使用的color文件名
 1. 进入命令模式 `shift + :`
 2. 输入指令:`colorscheme`
-3. 输出：当前使用的颜色主题
+3. 输出：当前使用的颜色主题    
+
 ![](colorscheme.png)
 
 ## 设置代码缩进
