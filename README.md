@@ -14,3 +14,23 @@ java -jar $HOME/lib/java/plantuml.jar -tsvg $@
 ````
 
 You can change the name of this file by setting `g:plantuml_executable_script`
+
+## 定义语法规则
+`syntax`目录中定义了`pluntuml.vim`语法规则,该文件名指定了语法类型`pluntuml`。
+```
+```
+## 后缀识别文件类型
+`ftdetect`目录定义了文件后缀的相关定义在读入`*.pu, *.uml or *.plantuml `文件时，自动识别其语法为刚才定义语法类型`pluntuml`。
+将`ftdetect/pluntuml.vim`拷贝到目录`~/.vim/ftdetect`即可
+```
+autocmd BufRead,BufNewFile *.pu,*.uml,*.plantuml setfiletype plantuml | set filetype=plantuml
+```
+`filetype`的名字即为上一步新建的文件的文件名。
+
+## 给定义的语法变量指定颜色
+在vim中输入`:colorscheme`查看当前使用的color文件名
+1. 进入命令模式 `shift + :`
+2. 输入指令:`colorscheme`
+3. 输出：当前使用的颜色主题
+![](colorscheme.png)
+
